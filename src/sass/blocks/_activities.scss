@@ -1,0 +1,73 @@
+@use "/src/sass/base" as *;
+
+.activities {
+  padding-top: 60px;
+
+  &__wrapper {
+    margin-top: 20px;
+    row-gap: 40px;
+  }
+
+  &__img {
+    margin-top: 40px;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    margin-block-start: 20px;
+    font-weight: 400;
+    font-size: 16px;
+
+    &--colored {
+      font-weight: 500;
+      color: $ceramic;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .activities {
+    padding-inline: 95px;
+
+    &__wrapper {
+      margin-top: 40px;
+    }
+
+    &__text {
+      margin-block-start: 25px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .activities {
+    padding-inline: 0;
+
+    &__wrapper {
+      margin-top: 80px;
+    }
+
+    &__col {
+      padding-inline: 10px;
+    }
+
+    &__img {
+      margin-top: 60px;
+    }
+
+    &__text {
+      &--fixed {
+        max-inline-size: 556px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .activities {
+    padding-top: 100px;
+  }
+}

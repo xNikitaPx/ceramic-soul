@@ -1,0 +1,156 @@
+@use "/src/sass/base" as *;
+
+.header {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  &__logo-image {
+    height: auto;
+  }
+
+  &__icons {
+    display: flex;
+    column-gap: 15px;
+
+    a {
+      display: block;
+      color: $dark;
+      text-decoration: none;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 10px;
+    background-color: $light;
+    transition: transform 0.4s ease-in-out;
+    z-index: 3;
+
+    &--active {
+      transform: translateX(100%);
+    }
+
+    &-close {
+      width: 20px;
+      height: 20px;
+      span {
+        display: block;
+        width: 20px;
+        height: 1px;
+        background-color: $dark;
+        &:first-child {
+          transform: translateY(8px) rotate(45deg);
+        }
+        &:last-child {
+          transform: translateY(8px) rotate(-45deg);
+        }
+      }
+    }
+
+    &-nav {
+      margin-top: 50px;
+      padding-left: 14px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $dark;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    margin-right: 35px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $dark;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__nav {
+      display: block;
+      margin-top: 20px;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+      a {
+        text-decoration: none;
+        color: $dark;
+      }
+    }
+
+    &__menu {
+      display: none;
+    }
+  }
+
+  .burger {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .header {
+    &__logo {
+      max-width: 150px;
+      max-height: 150px;
+    }
+
+    &__nav {
+      margin-top: 36px;
+
+      ul {
+        gap: 60px;
+      }
+    }
+  }
+}

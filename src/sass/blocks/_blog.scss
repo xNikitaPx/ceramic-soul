@@ -1,0 +1,99 @@
+@use "/src/sass/base" as *;
+
+.blog {
+  padding-block: 50px 60px;
+
+  &__title {
+    margin-top: 60px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 50px;
+    margin-top: 60px;
+  }
+
+  &__card {
+    border: 1px solid $dark;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    background: $light;
+  }
+
+  &__img {
+    width: calc(100% + 2px);
+    max-inline-size: calc(100% + 2px);
+    transform: translateX(-1px) translateY(-1px);
+    object-fit: cover;
+  }
+
+  &__data {
+    &-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 25px 25px 0;
+    }
+  }
+
+  &__title-h3 {
+    text-align: left;
+  }
+
+  &__text {
+    margin-top: 25px;
+    padding: 0 25px 25px;
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .blog {
+    &__wrapper {
+      @include angle-decoration;
+      position: relative;
+      padding: 25px 25px 0;
+    }
+
+    &__img {
+      height: 240px;
+    }
+
+    &__text {
+      margin-top: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .blog {
+    &__wrapper {
+      align-items: flex-start;
+    }
+
+    &__card {
+      max-width: 520px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .blog {
+    padding-block: 40px 100px;
+
+    &__wrapper {
+      align-items: stretch;
+    }
+
+    &__title {
+      margin-top: 100px;
+    }
+
+    &__card {
+      max-width: 670px;
+    }
+  }
+}

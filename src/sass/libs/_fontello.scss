@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "fontello";
+  src: url("/src/font/fontello.woff2") format("woff2"),
+    url("/src/font/fontello.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+
+  font-variant: normal;
+  text-transform: none;
+
+  line-height: 1em;
+
+  margin-left: 0.2em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-left-open:before {
+  content: "\e800";
+}
+.icon-right-open:before {
+  content: "\e801";
+}
+.icon-facebook:before {
+  content: "\e802";
+}
+.icon-shopping-bag:before {
+  content: "\e803";
+}
+.icon-search:before {
+  content: "\e804";
+}
+.icon-pinterest-circled:before {
+  content: "\f0d2";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}

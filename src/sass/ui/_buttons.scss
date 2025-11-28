@@ -1,0 +1,100 @@
+@use "/src/sass/base/" as *;
+
+.btn-default {
+  @include button;
+  width: 230px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.btn-send {
+  @include button;
+  width: 220px;
+  height: 40px;
+  font-size: 16px;
+
+  &:focus {
+    outline: none;
+    border-color: $ceramic;
+    color: $dark;
+  }
+
+  &:disabled {
+    color: $ui-disabled;
+    border-color: $ui-disabled;
+  }
+}
+
+.btn-submit {
+  @include button;
+  width: 90px;
+  height: 40px;
+  font-size: 16px;
+  color: $light;
+  border-color: $light;
+
+  &:disabled {
+    color: $ui-disabled;
+    border-color: $ui-disabled;
+  }
+}
+
+.btn-read {
+  @include button;
+  width: 145px;
+  height: 32px;
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+    border-color: $ceramic;
+    color: $dark;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .btn-default {
+    &:hover {
+      background-color: $dark;
+      color: $light;
+    }
+
+    &:active {
+      box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
+      background-color: rgba(217, 217, 217, 0.1);
+      color: $dark;
+      border: none;
+    }
+  }
+
+  .btn-send {
+    &:hover {
+      border-color: $ceramic;
+      color: $ceramic;
+    }
+
+    &:active {
+      border-color: $ceramic;
+      color: $dark;
+    }
+  }
+
+  .btn-read {
+    &:hover {
+      border-color: $ceramic;
+      color: $ceramic;
+    }
+
+    &:active {
+      border-color: $ceramic;
+      color: $dark;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .btn-default {
+    width: 330px;
+    height: 60px;
+  }
+}

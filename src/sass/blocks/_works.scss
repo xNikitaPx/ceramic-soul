@@ -1,0 +1,117 @@
+@use "/src/sass/base" as *;
+
+.works {
+  padding-block: 60px;
+
+  &__slider {
+    margin-top: 40px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: $dark;
+    border-radius: 0;
+    opacity: 1;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 7px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $ceramic;
+  }
+
+  &__slider-nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .works {
+    &__slider {
+      margin-top: 45px;
+    }
+
+    .swiper-slide img {
+      max-width: 400px;
+      margin-inline: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .works {
+    padding-bottom: 90px;
+    &__wrapper {
+      position: relative;
+    }
+
+    &__slider {
+      margin: 80px 40px 0 40px;
+    }
+
+    .swiper-pagination {
+      display: block;
+      bottom: -30px;
+    }
+
+    &__slider-nav {
+      position: absolute;
+      top: 50%;
+      width: 25px;
+      aspect-ratio: 1;
+      transform: translateY(-50%);
+      display: block;
+      font-size: 21px;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+
+      &::before {
+        width: auto;
+        margin: 0;
+      }
+    }
+
+    .icon-left-open {
+      left: 0;
+    }
+
+    .icon-right-open {
+      right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .works {
+    padding-block: 100px 130px;
+
+    &__slider {
+      margin: 80px 85px 0 85px;
+    }
+
+    .swiper-slide img {
+      margin: 0;
+    }
+
+    .icon-left-open {
+      left: 26px;
+    }
+
+    .icon-right-open {
+      right: 26px;
+    }
+  }
+}

@@ -1,0 +1,175 @@
+@use "/src/sass/base" as *;
+
+.footer {
+  padding-block: 50px;
+  background-color: $dark;
+  color: $light;
+
+  .just-validate-error-field {
+    border-bottom: 1px solid $ui-error;
+
+    &:hover {
+      border-bottom: 1px solid $ui-error;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $ui-error;
+    }
+  }
+
+  .just-validate-error-field::placeholder {
+    color: $ui-error;
+  }
+
+  &__title {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    max-width: 293px;
+  }
+
+  &__email {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: $ui-active;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $ui-active;
+    padding: 5px 5px 15px 5px;
+    font-size: 14px;
+    font-weight: 400;
+
+    &::placeholder {
+      color: $ui-active;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  &__check-block {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 2;
+    a {
+      color: #a22dc6;
+      text-decoration: none;
+      margin-left: 3px;
+    }
+  }
+
+  &__checkbox {
+    margin-right: 15px;
+    width: 15px;
+    aspect-ratio: 1;
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+
+  &__nav-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 40px 65px;
+  }
+
+  &__navigation ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__navigation a {
+    text-decoration: none;
+    color: $light;
+  }
+
+  &__soc1al {
+    margin-top: 40px;
+  }
+
+  &__soc1al-list {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__soc1al-list a {
+    display: block;
+    text-decoration: none;
+    color: $light;
+    font-size: 24px;
+  }
+
+  &__soc1al-list a::before {
+    margin: 0;
+  }
+
+  &__copy {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__news {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    &__news {
+      width: auto;
+    }
+
+    &__nav-block,
+    &__soc1al {
+      margin-top: 0;
+    }
+
+    &__copy {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .footer {
+    padding-top: 80px;
+
+    &__container {
+      display: flex;
+      column-gap: 313px;
+    }
+
+    &__wrapper {
+      display: flex;
+      column-gap: 313px;
+    }
+
+    &__copy {
+      margin-top: 18px;
+    }
+  }
+}
